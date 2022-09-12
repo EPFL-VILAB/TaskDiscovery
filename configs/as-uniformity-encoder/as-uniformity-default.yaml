@@ -1,0 +1,26 @@
+# agreement score params
+nsteps: 50
+as_learning_rate: 0.01
+opt: 'sgd'
+K: 2
+random_init: False
+task_temp: 5.
+
+# data
+shuffle: True
+batch_size: 512
+
+# encoder
+h_dim: 128
+n_linear_tasks: 128
+
+# uniformity
+temperature: 2
+uniformity_coef: 5.
+
+# optimization
+encoder_learning_rate: 0.001
+
+# logging
+check_val_every_n_epoch: 1
+save_step_frequency: 500

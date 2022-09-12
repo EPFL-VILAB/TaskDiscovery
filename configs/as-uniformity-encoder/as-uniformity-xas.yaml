@@ -1,0 +1,39 @@
+# agreement score params
+as_loss: 'xas'
+early_stop_xas_n_steps: 3
+early_stop_xas_threshold: 0.6
+min_nsteps: 5
+nsteps: 50 # max steps
+as_learning_rate: 0.01
+opt: 'sgd'
+K: 2
+random_init: False
+task_temp: 5.
+
+# AS data
+data_mode: 'full'
+shuffle: True
+batch_size: 512
+
+# encoder
+h_dim: 128
+n_linear_tasks: 128
+
+# uniformity
+temperature: 2
+uniformity_coef: 5.
+
+# optimization
+encoder_learning_rate: 0.001
+meta_steps: 3200
+
+# logging
+check_val_every_n_epoch: 2
+save_step_frequency: 64
+num_sanity_val_steps: 0
+
+# testing
+as_test_n_tasks: 32
+
+# other
+persistent_workers: True

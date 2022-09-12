@@ -1,0 +1,23 @@
+# training params
+max_steps: 100
+opt: 'sgd'
+learning_rate: 0.01 # 1e-2
+
+# data parameters:
+data_mode: 'full'
+shuffle: False
+val_split: 0.1
+random_labelling: False
+n_classes: 2
+batch_size: 512
+return_indicies: True
+persistent_workers: True
+limit_val_batches: 1
+
+# architecture
+arch: 'resnet18'
+
+# task params
+
+# other
+seed: 0
