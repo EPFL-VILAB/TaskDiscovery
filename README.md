@@ -161,7 +161,7 @@ You can find adversarial splits at [`cifar_splits.torch`](assets/adversarial_spl
   ...
 }
  ```
-Where the key `task_idx_N` specifies a target human-labelled binary classification task for which the adversarial splits are created (see Sec. 6.1 of the [paper](TODO:) for more details). We provide splits for 8 target tasks, and each task contains 8 splits created using different discovered tasks. Splits are a tuple of two tensors, each specifying indices of train and test set. 
+Where the key `task_idx_N` specifies a target human-labelled binary classification task for which the adversarial splits are created (see Sec. 6.1 of the [paper](TODO:) for more details). We provide splits for 7 target tasks, and each task contains 8 splits created using different discovered tasks. Splits are a tuple of two tensors, each specifying indices of train and test set. 
 
 These indices are used in the [following way](https://github.com/EPFL-VILAB/TaskDiscovery/blob/4efab4a331ed8087b4830b7f9ac1fc705083d234/adversarial_splits/cifar10/train.py#L66):
 
@@ -179,7 +179,7 @@ To run training with adversarial split use the following command:
 
 ```
 python adversarial_splits/cifar10/train.py \
---task_idx <TASK_IDX (0-7)> --split_idx <SPLIT_IDX (0-7)> \
+--task_idx <TASK_IDX (0-6)> --split_idx <SPLIT_IDX (0-7)> \
 --adversarial_splits_path assets/adversarial_splits/cifar10/cifar_splits.torch
 ```
 
